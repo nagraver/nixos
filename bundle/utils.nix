@@ -6,6 +6,7 @@
 }:
 {
   environment.systemPackages = with pkgs; [
+    home-manager
     nixd
     nixfmt-rfc-style
     nil

@@ -7,15 +7,20 @@
 
 {
   imports = [
-    ./hardware-configuration.nix
-    ./sound.nix
-    ./fonts.nix
-    ./terminal.nix
-    ./hyperland.nix
-    ./utils.nix
-    ./networking.nix
-    ./applications.nix
-    ./nvidia.nix
+    ./bundle/sound.nix
+    ./bundle/hardware-configuration.nix
+    ./bundle/fonts.nix
+    ./bundle/terminal.nix
+    ./bundle/hyperland.nix
+    ./bundle/utils.nix
+    ./bundle/networking.nix
+    ./bundle/applications.nix
+    ./bundle/nvidia.nix
+  ];
+
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
   ];
 
   nixpkgs.config = {
@@ -43,6 +48,7 @@
       "input"
       "networkmanager"
       "audio"
+      "video"
     ];
   };
 
@@ -58,5 +64,5 @@
   #   "ru_RU.UTF-8"
   # ];
 
-  system.stateVersion = "25.05"; # Did you read the comment?
+  system.stateVersion = "25.05";
 }
