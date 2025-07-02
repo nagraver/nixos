@@ -1,16 +1,14 @@
 {
-  config,
-  lib,
   pkgs,
   ...
 }:
 {
+
   environment.systemPackages = with pkgs; [
     waybar
-    wofi
     rofi-wayland
     hyprlock
-    nemo
+    hyprswitch
     swww
 
     # Screensoots
@@ -18,8 +16,8 @@
     slurp
     grim
 
-    # Dark theme
-    adw-gtk3
+    # Theme 4 gtk
+    rose-pine-hyprcursor
   ];
 
   programs.hyprland = {

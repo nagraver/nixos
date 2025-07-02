@@ -1,6 +1,4 @@
 {
-  config,
-  lib,
   pkgs,
   ...
 }:
@@ -8,6 +6,7 @@
   environment.systemPackages = with pkgs; [
     vim
     kitty
+    ghostty
     zsh
     oh-my-zsh
     zsh-powerlevel10k

@@ -1,10 +1,7 @@
 {
-  config,
-  lib,
   pkgs,
   ...
 }:
-
 {
   imports = [
     ./bundle/sound.nix
@@ -12,6 +9,7 @@
     ./bundle/fonts.nix
     ./bundle/terminal.nix
     ./bundle/hyperland.nix
+    # ./bundle/gnome.nix
     ./bundle/utils.nix
     ./bundle/networking.nix
     ./bundle/applications.nix
@@ -33,12 +31,6 @@
 
   time.timeZone = "Europe/Moscow";
 
-  console = {
-    font = "Lat2-Terminus16";
-    keyMap = "us";
-    # useXkbConfig = true; # use xkb.options in tty.
-  };
-
   # Users
   users.users.nagraver = {
     isNormalUser = true;
@@ -49,6 +41,7 @@
       "networkmanager"
       "audio"
       "video"
+      "docker"
     ];
   };
 
@@ -57,12 +50,9 @@
     wheelNeedsPassword = false;
   };
 
-  # Select internationalisation properties.
-  # i18n.defaultLocale = "en_US.UTF-8";
-  # i18n.extraLocales = [
-  #   "en_US.UTF-8"
-  #   "ru_RU.UTF-8"
-  # ];
+  console = {
+    keyMap = "us";
+  };
 
   system.stateVersion = "25.05";
 }

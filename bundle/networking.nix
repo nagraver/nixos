@@ -1,6 +1,4 @@
 {
-  config,
-  lib,
   pkgs,
   ...
 }:
@@ -8,6 +6,7 @@
   environment.systemPackages = with pkgs; [
     wget # Tool for retrieving files using HTTP, HTTPS, and FTP
     sing-box
+    zapret
   ];
 
   systemd.services.sing-box-tun = {

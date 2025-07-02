@@ -1,6 +1,4 @@
 {
-  config,
-  lib,
   pkgs,
   ...
 }:
@@ -14,7 +12,18 @@
     killall
     wev
     fastfetch
+    htop
+    btop
+    python313
+    python312
+    uv
+    p7zip
+    redis
+    postgresql_16
+    yt-dlp
   ];
+
+  virtualisation.docker.enable = true;
 
   # Garbage cleaner
   nix = {

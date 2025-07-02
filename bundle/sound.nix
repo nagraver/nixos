@@ -1,6 +1,4 @@
 {
-  config,
-  lib,
   pkgs,
   ...
 }:
@@ -9,6 +7,9 @@
     pulseaudio
     pamixer
     pavucontrol
+    myxer
+    libsForQt5.kmix
+    helvum
   ];
 
   services.pipewire = {
