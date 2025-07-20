@@ -14,7 +14,7 @@
     wantedBy = [ "multi-user.target" ];
     after = [ "network.target" ];
     serviceConfig = {
-      ExecStart = "${pkgs.sing-box}/bin/sing-box run --config /home/nagraver/.config/sing-box/config-tun.json";
+      ExecStart = "${pkgs.sing-box}/bin/sing-box run --config /home/nagraver/sing-box/config-tun.json";
       Restart = "on-failure";
       User = "nagraver";
       CapabilityBoundingSet = "CAP_NET_ADMIN CAP_NET_RAW";

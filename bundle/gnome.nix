@@ -3,7 +3,9 @@
   ...
 }:
 {
-    environment.gnome.excludePackages = (with pkgs; [
+  environment.gnome.excludePackages = (
+    with pkgs;
+    [
       atomix # puzzle game
       cheese # webcam tool
       epiphany # web browser
@@ -19,9 +21,10 @@
       iagno # go game
       tali # poker game
       totem # video player
-    ]);
+    ]
+  );
   environment.systemPackages = with pkgs; [
-    waybar
+    # waybar
     rofi-wayland
     # hyprlock
     # swww

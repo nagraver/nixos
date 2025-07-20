@@ -9,7 +9,6 @@
     pavucontrol
     myxer
     libsForQt5.kmix
-    helvum
   ];
 
   services.pipewire = {

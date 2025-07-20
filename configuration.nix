@@ -8,8 +8,8 @@
     ./bundle/hardware-configuration.nix
     ./bundle/fonts.nix
     ./bundle/terminal.nix
-    ./bundle/hyperland.nix
-    # ./bundle/gnome.nix
+    # ./bundle/hyperland.nix
+    ./bundle/gnome.nix
     ./bundle/utils.nix
     ./bundle/networking.nix
     ./bundle/applications.nix
